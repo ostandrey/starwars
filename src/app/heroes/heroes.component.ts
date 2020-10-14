@@ -13,12 +13,15 @@ export class HeroesComponent {
   heroes: IHeroes[] = [
     {
       id: 1,
-      name: 'Luke Skywalker'
+      name: 'Luke Skywalker',
+      height: 172,
+      mass: 77,
+      hair_color: 'blond',
+      skin_color: 'fair',
+      eye_color: 'blue',
+      birth_year: '19BBY',
+      gender: 'male',
     },
-    {
-      id: 2,
-      name: 'Darth Vader'
-    }
   ];
 
   // heroes$: Observable<IHeroes[]>;

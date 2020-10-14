@@ -13,6 +13,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 
+
+
 const appRoutes: Routes = [
   {path: '', component: AppComponent},
   {path: 'heroes', loadChildren: () => import('./heroes/module/heroes.module').then(m => m.HeroesModule)},
@@ -33,7 +35,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     MatCardModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

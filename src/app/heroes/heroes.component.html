@@ -6,10 +6,11 @@
   <div class="listOfHeroes">
     <mat-list role="list" *ngFor="let hero of heroes">
       <mat-list-item role="listitem" class="listItem">
-        <a >
+        <a routerLink="/heroes/1">
           {{hero.id}}. {{hero.name}}
         </a>
       </mat-list-item>
     </mat-list>
   </div>
 </mat-card>
+<router-outlet></router-outlet>

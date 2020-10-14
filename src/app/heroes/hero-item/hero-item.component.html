@@ -1,0 +1,13 @@
+<mat-card *ngFor="let hero of heroes">
+  <header>
+    <h1>{{hero.name}}</h1>
+  </header>
+  <mat-divider></mat-divider>
+  <div class="listOfHeroes">
+    <mat-list role="list">
+      <mat-list-item role="listitem" class="listItem">
+          {{hero.birth_year}}
+      </mat-list-item>
+    </mat-list>
+  </div>
+</mat-card>
