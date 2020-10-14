@@ -9,8 +9,12 @@ import { PlanetsModule } from './planets/module/planets.module';
 import { StarshipsModule} from './starships/module/starships.module';
 import {Router, RouterModule, Routes} from '@angular/router';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 
 const appRoutes: Routes = [
+  {path: '', component: AppComponent},
   {path: 'heroes', loadChildren: () => import('./heroes/module/heroes.module').then(m => m.HeroesModule)},
   {path: 'planets', loadChildren: () => import('./planets/module/planets.module').then(m => m.PlanetsModule)},
   {path: 'starships', loadChildren: () => import('./starships/module/starships.module').then(m => m.StarshipsModule)},
@@ -26,7 +30,10 @@ const appRoutes: Routes = [
     HeroesModule,
     PlanetsModule,
     StarshipsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MatCardModule,
+    MatDividerModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
