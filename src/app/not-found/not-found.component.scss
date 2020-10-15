@@ -1,0 +1,24 @@
+mat-card {
+  color: white;
+  background: #454546;
+  border: 1px solid #646464;
+  border-radius: 10px;
+  margin: 2em;
+  user-select: none;
+}
+
+mat-divider {
+  background-color: #646464;
+}
+
+.not-found-image {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-height: 300px;
+  border-radius: 10%;
+}
