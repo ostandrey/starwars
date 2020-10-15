@@ -3,6 +3,15 @@
     <h1>Heroes</h1>
   </header>
   <mat-divider></mat-divider>
+  <div class="input">
+    <mat-form-field class="example-full-width" id="form-field">
+      <mat-label>Search hero</mat-label>
+      <input matInput placeholder="Luke Skywalker">
+    </mat-form-field>
+    <div class="btn-search-container">
+      <button mat-stroked-button>Search</button>
+    </div>
+  </div>
   <div class="listOfHeroes">
     <mat-list role="list" *ngFor="let hero of heroes">
       <mat-list-item role="listitem" class="listItem">
