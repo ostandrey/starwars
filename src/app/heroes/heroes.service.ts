@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
-import {IHeroes} from './heroes.interface';
-
-const heroesList: IHeroes[] = [];
+import {IHero, IHeroes} from './heroes.interface';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +9,20 @@ const heroesList: IHeroes[] = [];
 export class HeroesService {
 
   // tslint:disable-next-line:variable-name
-  private _heroesItems = new BehaviorSubject<IHeroes[]>([]);
-  public heroesItems = this._heroesItems.asObservable();
+  private _heroes = new BehaviorSubject<IHero[]>([]);
+  readonly heroes = this._heroes.asObservable();
+  private heroUrl = 'https://swapi.dev/api/people/';
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  returnHeroesList(): void {
-    return this._heroesItems.next(heroesList);
+  getHeroes(): void {
+    this.http.get<IHeroes>(this.heroUrl)
+      .subscribe(
+        data => {
+          this._heroes.next(data.results);
+        }
+      );
   }
 }

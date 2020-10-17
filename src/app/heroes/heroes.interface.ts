@@ -1,4 +1,4 @@
-export interface IHeroes {
+export interface IHero {
   id: number;
   name: string;
   height: number;
@@ -8,4 +8,11 @@ export interface IHeroes {
   eye_color: string;
   birth_year: string;
   gender: string;
+}
+
+export interface IHeroes {
+  count: number;
+  next: string;
+  previous: string;
+  results: IHero[];
 }

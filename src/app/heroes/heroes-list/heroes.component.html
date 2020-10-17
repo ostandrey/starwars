@@ -13,10 +13,10 @@
     </div>
   </div>
   <div class="listOfHeroes">
-    <mat-list role="list" *ngFor="let hero of heroes">
+    <mat-list role="list" *ngFor="let hero of (heroes$ | async)">
       <mat-list-item role="listitem" class="listItem">
         <a routerLink="/heroes/1">
-          {{hero.id}}. {{hero.name}}
+          {{hero.name}}
         </a>
       </mat-list-item>
     </mat-list>
