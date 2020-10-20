@@ -13,11 +13,12 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
+import { HeroItemListComponent } from './heroes/hero-item-list/hero-item-list.component';
 
 
 
 const appRoutes: Routes = [
-  {path: '', component: AppComponent},
+  {path: '', redirectTo: '/heroes', pathMatch: 'full'},
   {path: 'heroes', loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule)},
   {path: 'planets', loadChildren: () => import('./planets/module/planets.module').then(m => m.PlanetsModule)},
   {path: 'starships', loadChildren: () => import('./starships/module/starships.module').then(m => m.StarshipsModule)},
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HeroItemListComponent
   ],
   imports: [
     BrowserModule,

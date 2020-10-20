@@ -1,5 +1,5 @@
-import { Component} from '@angular/core';
-import {IHeroes} from '../heroes.interface';
+import {Component, Input} from '@angular/core';
+import {IHero, IHeroes} from '../heroes.interface';
 
 @Component({
   selector: 'app-hero-item',
@@ -8,8 +8,7 @@ import {IHeroes} from '../heroes.interface';
 })
 export class HeroItemComponent {
 
-
-  heroes: IHeroes[];
+  @Input() heroes: IHero;
 
   // constructor() { }
   //

@@ -15,9 +15,7 @@
   <div class="listOfHeroes">
     <mat-list role="list" *ngFor="let hero of (heroes$ | async)">
       <mat-list-item role="listitem" class="listItem">
-        <a routerLink="/heroes/1">
-          {{hero.name}}
-        </a>
+        <app-hero-item [heroes]="hero"></app-hero-item>
       </mat-list-item>
     </mat-list>
   </div>
