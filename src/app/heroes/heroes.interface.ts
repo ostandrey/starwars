@@ -8,6 +8,7 @@ export interface IHero {
   eye_color: string;
   birth_year: string;
   gender: string;
+  url: string;
 }
 
 export interface IHeroes {

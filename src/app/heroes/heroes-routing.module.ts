@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import { HeroesComponent } from './heroes-list/heroes.component';
 import {HeroItemComponent} from './hero-item/hero-item.component';
+import {HeroItemListComponent} from './hero-item-list/hero-item-list.component';
 
 const routes: Routes = [
   { path: '', component: HeroesComponent},
-  { path: 'heroes/1', component: HeroItemComponent}
+  { path: 'heroes/:id', component: HeroItemComponent}
 ];
 
 
