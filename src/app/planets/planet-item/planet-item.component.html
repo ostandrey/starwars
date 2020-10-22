@@ -1,0 +1,16 @@
+<mat-card>
+  <h1>{{(planet$ | async).name}}</h1>
+  <mat-divider></mat-divider>
+  <div>
+    <div class="planet-item">Climate: {{(planet$ | async).climate}}</div>
+    <div class="planet-item">Diameter: {{(planet$ | async).diameter}}</div>
+    <div class="planet-item">Gravity: {{(planet$ | async).gravity}}</div>
+    <div class="planet-item">Orbital period: {{(planet$ | async).orbital_period}}</div>
+    <div class="planet-item">Population: {{(planet$ | async).population}}</div>
+    <div class="planet-item">Rotation period: {{(planet$ | async).rotation_period}}</div>
+    <div class="planet-item">Surface water: {{(planet$ | async).surface_water}}</div>
+    <div class="planet-item">Terrain: {{(planet$ | async).terrain}}</div>
+  </div>
+</mat-card>
+<router-outlet></router-outlet>
+

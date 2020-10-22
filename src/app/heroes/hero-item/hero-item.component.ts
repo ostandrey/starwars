@@ -21,6 +21,6 @@ export class HeroItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.hero$ = this.heroesService.hero;
-    this.heroesService.getHero(this.activatedRoute.snapshot.params.id)
+    this.heroesService.getHero(this.activatedRoute.snapshot.params.id);
   }
 }

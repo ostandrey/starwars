@@ -13,21 +13,24 @@ import {MatButtonModule} from '@angular/material/button';
 import {HeroItemListComponent} from './hero-item-list/hero-item-list.component';
 
 @NgModule({
-  declarations: [
-    HeroesComponent,
-    HeroItemComponent,
-    HeroItemListComponent
-  ],
-  imports: [
-    CommonModule,
-    HeroesRoutingModule,
-    MatCardModule,
-    MatDividerModule,
-    MatListModule,
-    RouterModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-  ]
+    declarations: [
+        HeroesComponent,
+        HeroItemComponent,
+        HeroItemListComponent
+    ],
+    exports: [
+        HeroItemListComponent
+    ],
+    imports: [
+        CommonModule,
+        HeroesRoutingModule,
+        MatCardModule,
+        MatDividerModule,
+        MatListModule,
+        RouterModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+    ]
 })
 export class HeroesModule { }

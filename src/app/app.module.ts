@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroesModule } from './heroes/heroes.module';
-import { PlanetsModule } from './planets/module/planets.module';
+import { PlanetsModule } from './planets/planets.module';
 import { StarshipsModule} from './starships/module/starships.module';
 import { RouterModule, Routes} from '@angular/router';
 import {NotFoundComponent} from './not-found/not-found.component';
@@ -19,7 +19,7 @@ import {HttpClientModule} from '@angular/common/http';
 const appRoutes: Routes = [
   {path: '', redirectTo: '/heroes', pathMatch: 'full'},
   {path: 'heroes', loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule)},
-  {path: 'planets', loadChildren: () => import('./planets/module/planets.module').then(m => m.PlanetsModule)},
+  {path: 'planets', loadChildren: () => import('./planets/planets.module').then(m => m.PlanetsModule)},
   {path: 'starships', loadChildren: () => import('./starships/module/starships.module').then(m => m.StarshipsModule)},
   {path: '**', component: NotFoundComponent},
 ];

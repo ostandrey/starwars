@@ -14,27 +14,25 @@ export class HeroesService {
   // tslint:disable-next-line:variable-name
   private _hero = new BehaviorSubject<IHero>(null);
   readonly hero = this._hero.asObservable();
-  private herosUrl = 'https://swapi.dev/api/people/';
+  private heroesUrl = 'https://swapi.dev/api/people/';
 
   constructor(
     private http: HttpClient
   ) { }
 
   getHeroes(): void {
-    this.http.get<IHeroes>(this.herosUrl)
+    this.http.get<IHeroes>(this.heroesUrl)
       .subscribe(
         data => {
-          console.log(data);
           this._heroes.next(data.results);
         }
       );
   }
 
   getHero(id: string): void {
-    this.http.get<IHero>(this.herosUrl + id)
+    this.http.get<IHero>(this.heroesUrl + id)
       .subscribe(
         data => {
-          console.log(data);
           this._hero.next(data);
         }
       );

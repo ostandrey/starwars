@@ -1,8 +1,8 @@
 export interface IHero {
   id: number;
   name: string;
-  height: number;
-  mass: number;
+  height: string;
+  mass: string;
   hair_color: string;
   skin_color: string;
   eye_color: string;

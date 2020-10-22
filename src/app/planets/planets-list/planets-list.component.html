@@ -1,21 +1,21 @@
 <mat-card>
   <header>
-    <h1>Heroes</h1>
+    <h1>Planets</h1>
   </header>
   <mat-divider></mat-divider>
   <div class="input">
     <mat-form-field class="example-full-width" id="form-field">
-      <mat-label>Search hero</mat-label>
-      <input matInput placeholder="Luke Skywalker">
+      <mat-label>Search planet</mat-label>
+      <input matInput placeholder="Tatooine">
     </mat-form-field>
     <div class="btn-search-container">
       <button mat-stroked-button>Search</button>
     </div>
   </div>
-  <div class="hero-list">
-    <mat-list role="list" *ngFor="let hero of (heroes$ | async)">
-      <mat-list-item role="listitem" class="hero-list-item">
-        <app-hero-item-list [hero]="hero" class="hero-item"></app-hero-item-list>
+  <div class="planet-list">
+    <mat-list role="list" *ngFor="let planet of (planets$ | async)">
+      <mat-list-item role="listitem" class="planet-list-item">
+        <app-planet-item-list [planet]="planet" class="planet-item"></app-planet-item-list>
       </mat-list-item>
     </mat-list>
   </div>

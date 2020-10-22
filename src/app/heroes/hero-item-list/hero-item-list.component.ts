@@ -13,7 +13,6 @@ export class HeroItemListComponent {
 
   constructor(private router: Router){  }
   navigate(): void {
-    console.log(this.hero.url);
     const heroUrlParsed = this.hero.url.split('/');
     this.router.navigate([`/heroes`, heroUrlParsed[5]]);
   }
