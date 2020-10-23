@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { StarshipsComponent } from '../starships.component';
+import {StarshipsListComponent} from './starships-list/starships-list.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: StarshipsComponent
-  }
+  {path: '', component: StarshipsListComponent},
+  {path: 'starships/:id', component: StarshipsListComponent},
 ];
 
 @NgModule({

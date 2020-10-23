@@ -1,0 +1,15 @@
+<mat-card>
+  <h1>{{(hero$ | async).name}}</h1>
+  <mat-divider></mat-divider>
+  <div>
+    <div class="hero-item">Height: {{(hero$ | async).height}}</div>
+    <div class="hero-item">Mass: {{(hero$ | async).mass}}</div>
+    <div class="hero-item">Hair color: {{(hero$ | async).hair_color}}</div>
+    <div class="hero-item">Skin color: {{(hero$ | async).skin_color}}</div>
+    <div class="hero-item">Eye color: {{(hero$ | async).eye_color}}</div>
+    <div class="hero-item">Birth year: {{(hero$ | async).birth_year}}</div>
+    <div class="hero-item">Gender: {{(hero$ | async).gender}}</div>
+  </div>
+</mat-card>
+<router-outlet></router-outlet>
+
