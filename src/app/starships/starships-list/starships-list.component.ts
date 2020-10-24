@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs';
+import {IStarship} from '../starships.interface';
+import {StarshipsService} from '../starships.service';
 
 @Component({
   selector: 'app-starships-list',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StarshipsListComponent implements OnInit {
 
-  constructor() { }
+  starships$: Observable<IStarship[]>;
+
+  constructor(private starshipsService: StarshipsService) { }
 
   ngOnInit(): void {
+    this.starships$ = this.starshipsService.starships;
+    this.starshipsService.getStarships();
   }
 
 }

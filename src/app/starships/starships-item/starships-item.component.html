@@ -1,14 +1,19 @@
 <mat-card>
-  <h1>{{(hero$ | async).name}}</h1>
+  <h1>{{(starship$ | async).name}}</h1>
   <mat-divider></mat-divider>
   <div>
-    <div class="hero-item">Height: {{(hero$ | async).height}}</div>
-    <div class="hero-item">Mass: {{(hero$ | async).mass}}</div>
-    <div class="hero-item">Hair color: {{(hero$ | async).hair_color}}</div>
-    <div class="hero-item">Skin color: {{(hero$ | async).skin_color}}</div>
-    <div class="hero-item">Eye color: {{(hero$ | async).eye_color}}</div>
-    <div class="hero-item">Birth year: {{(hero$ | async).birth_year}}</div>
-    <div class="hero-item">Gender: {{(hero$ | async).gender}}</div>
+    <div class="starship-item">Model: {{(starship$ | async).model}}</div>
+    <div class="starship-item">Starship class: {{(starship$ | async).starships_class}}</div>
+    <div class="starship-item">Passengers: {{(starship$ | async).passengers}}</div>
+    <div class="starship-item">Length: {{(starship$ | async).length}}</div>
+    <div class="starship-item">Manufactured: {{(starship$ | async).manufactured}}</div>
+    <div class="starship-item">Consumables: {{(starship$ | async).consumables}}</div>
+    <div class="starship-item">Cargo capability: {{(starship$ | async).cargo_capability}}</div>
+    <div class="starship-item">Crew: {{(starship$ | async).crew}}</div>
+    <div class="starship-item">Hyperdrive rating: {{(starship$ | async).hyperdrive_rating}}</div>
+    <div class="starship-item">Max atmosphering speed: {{(starship$ | async).max_atmosphering_speed}}</div>
+    <div class="starship-item">MGLT: {{(starship$ | async).MGLT}}</div>
+    <div class="starship-item">Cost in credits: {{(starship$ | async).cost_in_credits}}</div>
   </div>
 </mat-card>
 <router-outlet></router-outlet>
