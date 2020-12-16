@@ -37,10 +37,4 @@ export class HeroesService {
         }
       );
   }
-
-  searchHero(term: string): Observable<IHero[]> {
-    if (!term.trim()) {
-      return this.heroes;
-    }
-  }
 }

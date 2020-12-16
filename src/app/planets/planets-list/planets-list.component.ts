@@ -20,5 +20,4 @@ export class PlanetsListComponent implements OnInit {
     this.planets$ = this.planetsService.planets;
     this.planetsService.getPlanets();
   }
-
 }
