@@ -2,15 +2,27 @@
   display: flex;
 }
 
+h1 {
+  font-family: 'Russo One', sans-serif;
+  color: #e5eb00;
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 mat-card {
-  width: 20%;
-  max-width: 200px;
+  width: 100%;
+  max-width: 150px;
   float: left;
   background: #454546;
   margin: 2em;
   border: 1px solid #646464;
   border-radius: 10px;
-  height: 10%;
 }
 
 mat-divider {

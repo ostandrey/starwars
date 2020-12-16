@@ -15,6 +15,6 @@ export class StarshipsItemListComponent {
 
   navigate(): void {
     const starshipUrlParse = this.starship.url.split('/');
-    this.router.navigate(['starships/', starshipUrlParse]);
+    this.router.navigate([`/starships`, starshipUrlParse[5]]);
   }
 }

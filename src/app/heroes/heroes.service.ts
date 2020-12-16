@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from 'rxjs';
+import {BehaviorSubject, Observable, of} from 'rxjs';
 import {IHero, IHeroes} from './heroes.interface';
 import {HttpClient} from '@angular/common/http';
 
@@ -36,5 +36,11 @@ export class HeroesService {
           this._hero.next(data);
         }
       );
+  }
+
+  searchHero(term: string): Observable<IHero[]> {
+    if (!term.trim()) {
+      return this.heroes;
+    }
   }
 }

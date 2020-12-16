@@ -3,12 +3,12 @@
   <mat-divider></mat-divider>
   <div>
     <div class="starship-item">Model: {{(starship$ | async).model}}</div>
-    <div class="starship-item">Starship class: {{(starship$ | async).starships_class}}</div>
+    <div class="starship-item">Starship class: {{(starship$ | async).starship_class}}</div>
     <div class="starship-item">Passengers: {{(starship$ | async).passengers}}</div>
     <div class="starship-item">Length: {{(starship$ | async).length}}</div>
-    <div class="starship-item">Manufactured: {{(starship$ | async).manufactured}}</div>
+    <div class="starship-item">Manufactured: {{(starship$ | async).manufacturer}}</div>
     <div class="starship-item">Consumables: {{(starship$ | async).consumables}}</div>
-    <div class="starship-item">Cargo capability: {{(starship$ | async).cargo_capability}}</div>
+    <div class="starship-item">Cargo capability: {{(starship$ | async).cargo_capacity}}</div>
     <div class="starship-item">Crew: {{(starship$ | async).crew}}</div>
     <div class="starship-item">Hyperdrive rating: {{(starship$ | async).hyperdrive_rating}}</div>
     <div class="starship-item">Max atmosphering speed: {{(starship$ | async).max_atmosphering_speed}}</div>

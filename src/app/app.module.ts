@@ -14,8 +14,6 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
 
-
-
 const appRoutes: Routes = [
   {path: '', redirectTo: '/heroes', pathMatch: 'full'},
   {path: 'heroes', loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule)},
@@ -28,7 +26,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NotFoundComponent,
-
   ],
   imports: [
     BrowserModule,

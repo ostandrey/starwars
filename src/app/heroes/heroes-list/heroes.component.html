@@ -6,7 +6,7 @@
   <div class="input">
     <mat-form-field class="example-full-width" id="form-field">
       <mat-label>Search hero</mat-label>
-      <input matInput placeholder="Luke Skywalker">
+      <input matInput #searchBox type="text" placeholder="Luke Skywalker" (input)="searchHero(searchBox.value)">
     </mat-form-field>
     <div class="btn-search-container">
       <button mat-stroked-button>Search</button>

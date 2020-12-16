@@ -1,17 +1,21 @@
+
 <div class="container">
-  <mat-card>
-    <button mat-button>
-      <a routerLink="/heroes">Heroes</a>
-    </button>
-    <mat-divider></mat-divider>
-    <button mat-button>
-      <a routerLink="/planets">Planets</a>
-    </button>
-    <mat-divider></mat-divider>
-    <button mat-button>
-      <a routerLink="/starships">Spaceships</a>
-    </button>
-  </mat-card>
+  <div class="sidenav">
+    <h1>STAR WARS</h1>
+    <mat-card>
+      <button mat-button>
+        <a routerLink="/heroes">Heroes</a>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-button>
+        <a routerLink="/planets">Planets</a>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-button>
+        <a routerLink="/starships">Spaceships</a>
+      </button>
+    </mat-card>
+  </div>
   <div class="display-content">
     <router-outlet></router-outlet>
   </div>
